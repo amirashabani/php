@@ -5,50 +5,51 @@
 	<link rel="stylesheet" type="text/css" href="font-face.css"/>
 	</head>
 	<body>
-		<form action="form.php" method="POST">
+		<form action="index.php" method="POST">
 			نام و نام خانوادگی: <input name="name" type="text"> <br> <br>
 			میزان کارکرد: <input name="time" type="text"> <br> <br>
 			<br>
 
-			جنسیت:
-			زن<input name="gender" type="radio" value="f" checked>
-			مرد<input name="gender" type="radio" value="m"> <br> <br>
+			جنسیت: 
+			زن<input name="gender" type="radio" value="زن" checked>
+			مرد<input name="gender" type="radio" value="مرد"> <br> <br>
 			<br>
 
-			مدرک تحصیلی:
-			لیسانس<input name="degree" type="radio" value="bachelor" checked>
-			فوق لیسانس<input name="degree" type="radio" value="master">
-			دکترا<input name="degree" type="radio" value="doctor">
-			فوق دکترا<input name="degree" type="radio" value="postdoc"> <br> <br>
+			مدرک تحصیلی: 
+			لیسانس<input name="degree" type="radio" value="لیسانس" checked>
+			فوق لیسانس<input name="degree" type="radio" value="فوق لیسانس">
+			دکترا<input name="degree" type="radio" value="دکترا">
+			فوق دکترا<input name="degree" type="radio" value="فوق دکترا"> <br> <br>
 			<br>
 
-			شرایط: <br>
-			بدی اب و هوا<input name="weather" type="checkbox"> <br>
-			سختی کار<input name="work" type="checkbox"> <br>
-			حق عائله‌مندی<input name="family" type="checkbox"> <br> <br>
+			شرایط: 
+			بدی آب و هوا <input name="weather" type="checkbox"> 
+			سختی کار<input name="work" type="checkbox"> 
+			حق عائله‌مندی<input name="family" type="checkbox"> <br>
 			<br>
 
 			شهر محل فعالیت:
 			<select name="city">
-				<option value="tehran">تهران</option>
-				<option value="qom">قم</option>
-				<option value="shiraz">شیراز</option>
-				<option value="mashhad">مشهد</option>
-				<option value="kordestan">کردستان</option>
-				<option value="gilan">گیلان</option>
-				<option value="tabriz">تبریز</option>
-				<option value="ardebil">اردبیل</option>
-				<option value="semnan">سمنان</option>
-				<option value="bandarabas">بندرعباس</option>
-				<option value="sistan">سیستان</option>
-				<option value="zahedan">زاهدان</option>
-				<option value="mazandaran">مازندران</option>
+				<option value="تهران">تهران</option>
+				<option value="اصفهان">اصفهان</option>
+				<option value="قم">قم</option>
+				<option value="شیراز">شیراز</option>
+				<option value="مشهد">مشهد</option>
+				<option value="کردستان">کردستان</option>
+				<option value="گیلان">گیلان</option>
+				<option value="تبریز">تبریز</option>
+				<option value="اردبیل">اردبیل</option>
+				<option value="سمنان">سمنان</option>
+				<option value="بندرعباس">بندرعباس</option>
+				<option value="سیستان">سیستان</option>
+				<option value="زاهدان">زاهدان</option>
+				<option value="مازندران">مازندران</option>
 			</select> <br>
 			<br>
 
 			مدارک تحصیلی: 
 			<input name="file" type="file">
-			<input name="submit" type="submit" value="دخیره‌سازی">
+			<input name="submit" type="submit" value="ذخیره‌سازی">
 		</form>
 	</body>
 </html>

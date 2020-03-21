@@ -1,6 +1,9 @@
-body {
+* {
 	font-family: "Sahel";
 	font-weight: "normal";
+}
+
+body {
 	background-color: #000000;
 	color: #FFFFFF;
 }
