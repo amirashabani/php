@@ -53,10 +53,10 @@ function total_price($hourly_price) {
 
 echo '<pre>';
 echo '<table border=1>';
-table_row(array('نام و نام خانوادگی', $_POST["name"]));
-table_row(array('میزان کارکرد', $_POST["time"]));
-table_row(array('جنسیت', $_POST["gender"]));
-table_row(array('مدرک تحصیلی', $_POST["degree"]));
+if(isset($_POST["name"])) table_row(array('نام و نام خانوادگی', $_POST["name"]));
+if((isset($_POST["time"]))) table_row(array('میزان کارکرد', $_POST["time"]));
+if(isset($_POST["gender"])) table_row(array('جنسیت', $_POST["gender"]));
+if((isset($_POST["degree"]))) table_row(array('مدرک تحصیلی', $_POST["degree"]));
 
 $circumstance = '';
 if(isset($_POST["weather"])) $circumstance .= 'سختی کار، ';
@@ -66,9 +66,9 @@ if(isset($_POST["family"])) $circumstance .= 'حق عائله‌مندی، ';
 if($circumstance !== '') $circumstance = substr($circumstance, 0, -3);
 
 table_row(array('شرایط', $circumstance));
-table_row(array('شهر محل فعالیت', $_POST["city"]));
+if(isset($_POST["city"])) table_row(array('شهر محل فعالیت', $_POST["city"]));
 table_row(array('حقوق ساعتی', $hourly_price));
-table_row(array('مجموع حقوق', total_price($hourly_price)));
+if(isset($_POST["time"])) table_row(array('مجموع حقوق', total_price($hourly_price)));
 
 echo '</table>';
 ?>
