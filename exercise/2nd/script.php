@@ -1,10 +1,45 @@
 <?php
 $hourly_price = 12000;
 
+function convert_digits($string, $to) {
+	$to_fa = array(
+		"0" => "۰",
+		"1" => "۱",
+		"2" => "۲",
+		"3" => "۳",
+		"4" => "۴",
+		"5" => "۵",
+		"6" => "۶",
+		"7" => "۷",
+		"8" => "۸",
+		"9" => "۹"
+	);
+
+	$to_en = array(
+		"۰" => "0",
+		"۱" => "1",
+		"۲" => "2",
+		"۳" => "3",
+		"۴" => "4",
+		"۵" => "5",
+		"۶" => "6",
+		"۷" => "7",
+		"۸" => "8",
+		"۹" => "9"
+	);
+
+	if($to === "en") return strtr($string, $to_en);
+	else if($to === "fa") return strtr($string, $to_fa);
+	else {
+		trigger_error("destination language isn't recognized.", E_USER_WARNING);
+		return $string;
+	}
+}
+
 function table_row($elements) {
 	echo '<tr>';
 	for($i = 0; $i < count($elements); $i++) {
-		echo '<td>' . $elements[$i] . '</td>';
+		echo '<td>' . convert_digits($elements[$i], "fa") . '</td>';
 	}
 	echo '</tr>';
 }
