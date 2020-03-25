@@ -53,8 +53,9 @@ function total_price($hourly_price) {
 		"دکترا" => 15,
 		"فوق دکترا" => 20
 	);
+	$time = convert_digits($_POST["time"], "en");
 
-	$total_price += ($hourly_price * (int)$_POST["time"]);
+	$total_price += ($hourly_price * $time);
 	$report .= '(' . $hourly_price . ' * ' . $_POST["time"] . ') + ';
 
 	$degree = ($total_price * $degree_percentage[$_POST["degree"]]) / 100;
