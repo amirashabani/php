@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="font-face.css"/>
 	</head>
 	<body>
+		<div class="container">
+		<div class="col">
 		<form action="index.php" method="POST">
 			نام و نام خانوادگی: <input name="name" type="text"> <br> <br>
 			میزان کارکرد: <input name="time" type="text"> <br> <br>
@@ -51,7 +53,11 @@
 			<input name="file" type="file">
 			<input name="submit" type="submit" value="ذخیره‌سازی">
 		</form>
+		</div>
+		<div class="col">
+			<?php include_once("script.php"); ?>
+		</div>
+		</div>
 	</body>
 </html>
 
-<?php include_once("script.php"); ?>

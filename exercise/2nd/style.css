@@ -11,3 +11,11 @@ body {
 tr:last-child td:last-child {
 	direction: ltr;
 }
+
+.container {
+	display: flex;
+}
+
+.col {
+	width: 50%;
+}
